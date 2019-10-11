@@ -454,8 +454,8 @@ h6::before {
 }
 .about-avatar {
   position: relative;
-  margin: -10rem auto 1rem;
-  max-width: 12rem;
+  margin: -8rem auto 1rem;
+  max-width: 10rem;
   z-index: 3;
 }
 .category-tree-list {
