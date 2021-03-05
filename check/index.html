@@ -157,8 +157,10 @@
                 <span class="w-con">男</span></li> 
                 <li><span class="w-title">学工号</span>：<span class="w-con">17377403</span></li>
                 <li><span class="w-title">学院</span>：<span class="w-con">高等理工学院</span></li>
+                <!--
                 <li><span class="w-title">生效时间</span>：<span class="w-con" id="start_date"></span></li>
                 <li><span class="w-title">失效时间</span>：<span class="w-con" id="end_date"></span></li>
+                -->
                 <!----> <!---->
                 </ul></div> <p class="health_but">可以通行</p></div>
                 <div class="health_bot">
@@ -195,12 +197,13 @@
                     var year = date.getFullYear();
                     var month = date.getMonth()+1;
                     var day = date.getDate();
+                    var next_day = date.getDate()+1;
                     var hour = date.getHours();
                     var minutes = date.getMinutes();
                     var seconds = date.getSeconds();
                     var str = year + "年" + month + "月" + day + "日 " + Appendzero(hour) + ":" + Appendzero(minutes) + ":" + Appendzero(seconds) ;
                     var start = year + "年" + month + "月" + day + "日 " + Appendzero(hour-2) + ":00:00";
-                    var end = year + "年" + month + "月" + day+1 + "日 " + Appendzero(hour-2) + ":00:00";
+                    var end = year + "年" + month + "月" + next_day + "日 " + Appendzero(hour-2) + ":00:00";
                     var health_date = document.getElementById("headlth_date");
                     health_date.innerHTML = str;
                     var start_date = document.getElementById("start_date");
