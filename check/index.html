@@ -200,7 +200,7 @@
                     var seconds = date.getSeconds();
                     var str = year + "年" + month + "月" + day + "日 " + Appendzero(hour) + ":" + Appendzero(minutes) + ":" + Appendzero(seconds) ;
                     var start = year + "年" + month + "月" + day + "日 " + Appendzero(hour-2) + ":00:00";
-                    var end = year + "年" + month + "月" + day + "日 " + Appendzero(hour+6) + ":00:00";
+                    var end = year + "年" + month + "月" + day+1 + "日 " + Appendzero(hour-2) + ":00:00";
                     var health_date = document.getElementById("headlth_date");
                     health_date.innerHTML = str;
                     var start_date = document.getElementById("start_date");
