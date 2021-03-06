@@ -1,0 +1,405 @@
+<html><head><meta charset="utf-8"><meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=EDGE"><title>小程序服务</title><style>body {
+			-webkit-text-size-adjust: 100% !important;
+		}
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		pre,
+		a,
+		abbr,
+		acronym,
+		address,
+		big,
+		cite,
+		code,
+		del,
+		dfn,
+		em,
+		font,
+		img,
+		ins,
+		kbd,
+		q,
+		s,
+		samp,
+		small,
+		strike,
+		strong,
+		sub,
+		sup,
+		tt,
+		var,
+		b,
+		u,
+		i,
+		center,
+		dl,
+		dt,
+		dd,
+		ol,
+		ul,
+		li,
+		fieldset,
+		form,
+		label,
+		legend,
+		table,
+		caption,
+		tbody,
+		tfoot,
+		thead,
+		tr,
+		th,
+		td,
+		article,
+		aside,
+		canvas,
+		details,
+		embed,
+		figure,
+		figcaption,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		output,
+		ruby,
+		section,
+		summary,
+		time,
+		mark,
+		audio,
+		video,
+		button,
+		input,
+		textarea {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header,
+		footer,
+		section,
+		article,
+		aside,
+		nav,
+		hgroup,
+		address,
+		figure,
+		figcaption,
+		menu,
+		details {
+			display: block;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		caption,
+		th {
+			font-weight: normal;
+		}
+
+		html,
+		body,
+		fieldset,
+		img,
+		iframe,
+		abbr {
+			border: 0;
+		}
+
+		i,
+		cite,
+		em,
+		var,
+		address,
+		dfn {
+			font-style: normal;
+		}
+
+		[hidefocus],
+		summary {
+			outline: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		pre,
+		code,
+		kbd,
+		samp {
+			font-family: inherit;
+		}
+
+		q:before,
+		q:after {
+			content: none;
+		}
+
+		body,
+		textarea,
+		input,
+		button,
+		select,
+		keygen,
+		legend {
+			color: #333;
+			outline: 0;
+			font-family: PingFang-SC-Medium, 'microsoft yahei', sans-serif;
+		}
+
+		input,
+		textarea {
+			-webkit-appearance: none;
+			border: none;
+			outline: none;
+			background: none;
+			-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+		}
+
+		textarea {
+			overflow: auto;
+			resize: none;
+		}
+
+		a,
+		button {
+			display: block;
+			background: none;
+			border: none;
+		}
+
+		a {
+			-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+			outline: none;
+			text-decoration: none;
+		}
+
+		img {
+			display: block;
+		}
+		.fram-alert {
+			position: fixed;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%, 0%);
+			top: 0;
+			background: rgba(49, 49, 49, 0.8);
+			z-index: 1000;
+		}
+
+		.fram-alert>div {
+			background: #fff;
+			color: #333;
+			font-size: 13px;
+			position: fixed;
+			top: 200px;
+			left: 50%;
+			border-radius: 2px;
+			transform: translate(-50%, 0);
+			opacity: 1;
+			transition: all 1s ease;
+			z-index: 999;
+			width: calc(100% - 80px);
+		}
+
+		.fram-alert>div p {
+			height: 86px;
+			margin: 0 20px;
+		}
+
+		.fram-alert>div p span {
+			display: block;
+			color: #333;
+			height: 43px;
+			line-height: 60px;
+		}
+
+		.fram-alert>div p span {
+			height: 100%;
+			line-height: 86px;
+		}
+
+		.fram-alert>div a {
+			display: block;
+			margin: 0 20px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			color: #fff;
+			font-size: 14px;
+			border-radius: 2px;
+			margin-bottom: 23px;
+			background: #4285f4;
+
+		}
+
+		html {
+			background: #eee;
+		}
+
+		@media (max-width: 768px) {
+			body>div:first-child {
+				max-width: 768px;
+				margin: 0 auto;
+			}
+		}
+
+		@media (min-width: 769px) {
+			body {
+				margin: 0 auto !important;
+			}
+
+			body>div:first-child {
+				width: 100%;
+			}
+		}
+
+		#__vconsole {
+			font-size: 12px !important;
+		}
+
+		.page-load>div,
+		.file-pop>div {
+			min-width: 150px;
+			text-align: center;
+			min-height: 123px;
+			line-height: 123px;
+			background: rgba(51, 51, 51, 0.7);
+			color: #fff;
+			font-size: 15px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			border-radius: 5px;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			opacity: 1;
+			z-index: 999;
+			max-width: 250px;
+			word-break: break-all;
+		}
+
+		.page-load>div img,
+		.file-pop>div img {
+			width: 55px;
+			height: 55px;
+			margin: 19px auto 10px;
+		}
+
+		.page-load>div p,
+		.file-pop>div p {
+			color: #fff;
+			font-size: 14px;
+			min-height: 14px;
+			line-height: 14px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0 10px;
+		}
+
+		.glable-nodata {
+			margin-top: 0 !important;
+			padding-top: 100px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		.glable-nodata img {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.glable-nodata p {
+			color: #878787;
+			font-size: 14px;
+			min-height: 14px;
+			line-height: 14px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0 10px;
+		}
+
+		html {
+			/*filter:grayscale(100%);*/
+		}</style><link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1630811_dasm6bpv2u6.css"><link href="https://app.buaa.edu.cn/site/static/css/app.d5e9605195782f167aac040984d549a0.css" rel="stylesheet"><link data-id="46a83644db5fcc941de483636b6828b3" href="https://app.buaa.edu.cn:/site/static/css/style/buaa.main.css?v=1615030839120" rel="stylesheet" type="text/css"><script type="text/javascript" charset="utf-8" async="" src="https://app.buaa.edu.cn/site/static/js/0.e08bf486f5a649a4c39d.js?v=1614929707012"></script><script type="text/javascript" charset="utf-8" async="" src="https://app.buaa.edu.cn/site/static/js/547.cf52b18ed068d14f55ae.js?v=1614929707012"></script><link type="image/png" href="https://imgapp.buaa.edu.cn/image/25/c2adaf73e7b4ea6058125d26d2392e21.jpg" rel="shortcut icon"><link type="image/png" href="https://imgapp.buaa.edu.cn/image/25/c2adaf73e7b4ea6058125d26d2392e21.jpg" rel="shortcut icon"></head><body><div style="display: block;"><div style=""><!----> <div class="applicationSquare-wrap-two"><section><div class="wrap"><div class="banner" style="display: none;"></div> <div class="banners" style="display: none;"><!----></div> <section class="g-search"><i class="icon iconfont icon-sousuo"></i> <input type="text"> <span>输入关键字搜索</span></section> <div class="line"></div> <div class="content"><div class="content-wrap"><p>疫情防控服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/31/0391e804af8a028fdb7f94cf7894b4ab.png" alt=""> <span>学生健康填报</span></li><li><img src="https://imgapp.buaa.edu.cn/image/56/9c4e3f54e79d23ff4b24d1b9420b80bd.png" href="/buaa/pass/index.html" alt=""> <span>出校通行卡</span></li><li><img src="https://imgapp.buaa.edu.cn/image/48/4aaeb946f819d740e96b05ac091aebc5.png" alt=""> <span>21年春季返校申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/35/1bf0034a3631884ea57185081160c5f3.png" alt=""> <span>学生出入校申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/41/e50e02b34a356ed68648a0f76d46bf21.png" alt=""> <span>学生出入校销假</span></li><li><img src="https://imgapp.buaa.edu.cn/image/29/4785863cbb1849503560395926f50e38.png" alt=""> <span>服务FAQ</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>教务服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/0/662.png" alt=""> <span>课表查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/652.png" alt=""> <span>成绩查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/673.png" alt=""> <span>学习进度查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/24/343c027be58bb1483be243fd02c66ee7.png" alt=""> <span>空教室查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/675.png" alt=""> <span>考试查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/55/945c6469def7cbcf097d06c3632a9b3f.png" alt=""> <span>自助打印服务</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>图书服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/23/fe616593d302d14abcee527be4c36656.png" alt=""> <span>图书检索</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/f0c29ff6ab7d4e5e6bc4e322768e9d81.png" alt=""> <span>热门图书</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/c0d972284d5076b3f3459e9f46125ca3.png" alt=""> <span>当前借阅</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/9703d73793bc1040a5d30cc7323f817e.png" alt=""> <span>我的书架</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/a04486eba5ce27ccd9a51cf349a88a17.png" alt=""> <span>当前预约</span></li><li><img src="https://imgapp.buaa.edu.cn/image/30/4b7a75f572ada9e8d420015281e29268.png" alt=""> <span>当前委托</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/017b68710b8a152c9e5704e39ad305b6.png" alt=""> <span>违章信息</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/895cb3118d6eb777dd0d5a6398e1d817.png" alt=""> <span>个人图书信息</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>生活服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/49/5e7895422859bf18c82ba276acb58ec4.png" alt=""> <span>住宿变动申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/d6ccab7bccc2ecb4a6b9b6575dee5113.png" alt=""> <span>水费欠费查询</span></li><li><img src="https://imgapp.buaa.edu.cn/image/1/3095.png" alt=""> <span>校车服务</span></li><li><img src="https://imgapp.buaa.edu.cn/image/1/3096.png" alt=""> <span>一卡通招领</span></li><li><img src="https://imgapp.buaa.edu.cn/image/2/4771.png" alt=""> <span>失物招领</span></li><li><img src="https://imgapp.buaa.edu.cn/image/22/aa5dedbee81816214436315779d5aa79.png" alt=""> <span>修改手机号</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>网络服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/23/77d85a4964d7073f6c916b51db828698.png" alt=""> <span>北航云盘</span></li><li><img src="https://imgapp.buaa.edu.cn/image/23/b3f66ad84e8deb3bf608e237c403fd3c.png" alt=""> <span>网络报修</span></li><li><img src="https://imgapp.buaa.edu.cn/image/2/4748.png" alt=""> <span>购买流量</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/651.png" alt=""> <span>查询流量</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/670.png" alt=""> <span>修改密码</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/677.png" alt=""> <span>修改终端数</span></li><li><img src="https://imgapp.buaa.edu.cn/image/0/659.png" alt=""> <span>离校转账</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>国际学生服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/50/f7ee538c726b2a53c3abf02ab7ffaf0c.png" alt=""> <span>北航优秀外国留学生奖学金（学习优秀奖）（研究生）申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/50/bcf5ed9d8c13387335929b1b5cdf9aca.png" alt=""> <span>北航优秀外国留学生奖学金（学习优秀奖）（本科生）申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/50/ae7741056b62ef36f0a04c64b9d056cc.png" alt=""> <span>北航优秀外国留学生奖学金（杰出表现奖）申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/31/ea67639a0e1a739a4ee8119a22e85d2a.png" alt=""> <span>专项合作奖学金年度评审</span></li><li><img src="https://imgapp.buaa.edu.cn/image/31/a1db3fb36c57368245c75e732b26863c.png" alt=""> <span>自费研究生奖学金申请</span></li><li><img src="https://imgapp.buaa.edu.cn/image/31/fc3027ae17c976175bd5172072c9e691.png" alt=""> <span>自费本科生奖学金申请</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>办公服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/2/4612.png" alt=""> <span>邮件账号注册</span></li><li><img src="https://imgapp.buaa.edu.cn/image/2/4526.png" alt=""> <span>邮件服务</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>党建服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/41/51ea738b35758b1835bfad3c94c5a327.png" alt=""> <span>组织生活</span></li><li><img src="https://imgapp.buaa.edu.cn/image/41/e8f987375d9f8525b9cad6a2b966085e.png" alt=""> <span>党员学习日</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>就业服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/32/6cadecda4bde7cfbd3d5ee1a41334306.png" alt=""> <span>找职位</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/6a698b6beb101413100f33c680d1de0f.png" alt=""> <span>去实习</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/fb1c5c687d577b37612bad36701f8e81.png" alt=""> <span>精准推荐</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/8ca8780ba86b732cafd997e7099492d1.png" alt=""> <span>宣讲会</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/131118180e05cba03d7035e98fcc9371.png" alt=""> <span>双选会</span></li><li><img src="https://imgapp.buaa.edu.cn/image/32/ed1cded47b49fafa9ce41d1fb90551b8.png" alt=""> <span>校招公告</span></li></ul> <div class="line"></div></div><div class="content-wrap"><p>统计服务</p> <h1><h2></h2></h1> <ul><li><img src="https://imgapp.buaa.edu.cn/image/2/4671.png" alt=""> <span>教工签到统计</span></li></ul> <div class="line"></div></div></div> <!----></div> <section class="g-nodata" style="display: none;"><img src=""> <p></p></section> <section class="g-nodata" style="display: none;"><img src="/site/static/images/nosearch.png"> <p>暂无相关搜索信息</p></section></section> <div data-v-3f5a7bce="" class="g-pop" appkey="appsquare" style="display: none; width: 375.2px;"><div data-v-3f5a7bce="" class="pophint"><img data-v-3f5a7bce="" src="" alt=""> <p data-v-3f5a7bce=""></p></div></div> <!----></div> <!----> <!----></div> <!----> <div data-v-3f5a7bce="" class="g-pop" appkey="appsquare" style="width: 375.2px; display: none;"><div data-v-3f5a7bce="" class="pophint"><img data-v-3f5a7bce="" src="" alt=""> <p data-v-3f5a7bce=""></p></div></div></div><script>if (window.location.href.indexOf("debug=1") !== -1) {
+			var jsScript = document.createElement("script");
+			jsScript.src = "/site/static/js/vconsole.min.js";
+			jsScript.type = "text/javascript";
+			jsScript.async = false;
+			jsScript.onload = function () {
+
+				var vConsole = new VConsole();
+			};
+			document.getElementsByTagName("body")[0].appendChild(jsScript);
+		}</script><div tabindex="-1" role="dialog" aria-hidden="true" class="pswp"><div class="pswp__bg"></div> <div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div></div> <div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div> <button title="Close (Esc)" class="pswp__button pswp__button--close"></button> <button title="Share" class="pswp__button pswp__button--share"></button> <button title="Toggle fullscreen" class="pswp__button pswp__button--fs"></button> <button title="Zoom in/out" class="pswp__button pswp__button--zoom"></button> <div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div> <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div> <button title="Previous (arrow left)" class="pswp__button pswp__button--arrow--left"></button> <button title="Next (arrow right)" class="pswp__button pswp__button--arrow--right"></button> <div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div><div id="progress_loading" style="display: none;"><div style="width: 0%;"></div></div><script src="https://app.buaa.edu.cn/site/static/js/md5.js"></script><script src="https://app.buaa.edu.cn/site/static/js/getscript.js"></script><script type="text/javascript">(function () {
+		function IEVersion() {
+			var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+			var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+			var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+			var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+			if (isIE) {
+				var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+				reIE.test(userAgent);
+				var fIEVersion = parseFloat(RegExp["$1"]);
+				if (fIEVersion == 7) {
+					return 7;
+				} else if (fIEVersion == 8) {
+					return 8;
+				} else if (fIEVersion == 9) {
+					return 9;
+				} else if (fIEVersion == 10) {
+					return 10;
+				} else {
+					return 6;//IE版本<=7
+				}
+			} else if (isEdge) {
+				return 'edge';//edge
+			} else if (isIE11) {
+				return 11; //IE11
+			} else {
+				return false;//不是ie浏览器
+			}
+		}
+		if (IEVersion() && IEVersion() != 'edge') {
+			if (window.location.href.indexOf('leaveshoolsq') > -1) {
+				document.body.innerHTML = '<div style="font-size: 20px;text-align: center;margin: 300px auto;">为了更好的浏览效果，请您使用较新版本的Chrome、Firefox、Safari进行访问</div>'
+			}
+		}
+		if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+			handleFontSize();
+		} else {
+			if (document.addEventListener) {
+				document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+			} else if (document.attachEvent) {
+				document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+				document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+			}
+		}
+		function handleFontSize() {
+			WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+			WeixinJSBridge.on('menu:setfont', function () {
+				WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+			});
+		}
+	})();</script></body></html>
