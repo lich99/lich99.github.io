@@ -51,6 +51,7 @@ end_date.innerHTML = end;
 -->
 }
 setInterval(time,1000);
+window.onload=function(){time()}
 </script>
 
 
@@ -75,7 +76,6 @@ jsScript.async = false;
 jsScript.onload = function () {
 var vConsole = new VConsole();
 };
-
 document.getElementsByTagName("body")[0].appendChild(jsScript);
 }
 </script>
