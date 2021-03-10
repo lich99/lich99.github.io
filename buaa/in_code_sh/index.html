@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<title>通行码</title>
+<link data-id="46a83644db5fcc941de483636b6828b3" href="https://app.buaa.edu.cn:/site/static/css/style/buaa.main.css?v=1615033350666" rel="stylesheet" type="text/css">
+<link type="image/png" href="https://imgapp.buaa.edu.cn/image/25/c2adaf73e7b4ea6058125d26d2392e21.jpg" rel="shortcut icon">
+</head>
+<body>
+<div class="newQrcode" style="display: block;">
+<div style="">
+<div class="epide_outer">
+<div class="logo">
+<div><img src="https://imgapp.buaa.edu.cn/image/25/c2adaf73e7b4ea6058125d26d2392e21.jpg" alt=""></div>
+<span>北京航空航天大学</span></div> 
+<div class="bjc"><img src="https://app.buaa.edu.cn/site/static/images/smlogin/mengceng2.png" alt=""> 
+<div class="users"><ul>
+<li><span>姓名</span><span>李澄海</span></li> 
+<li><span>学工号</span><span>17377403</span></li></ul> 
+<ul><li style="width: 100%;"><span>单位</span><span>数学科学学院</span></li></ul></div></div></div> 
+<div class="content mastercontent">
+<div class="location_tit">
+<div class="qrcode-wrap master">
+<div class="title-master"><span class="left">通行码</span>
+<span class="right"><em id="health_time"></em></span></div> 
+
+<script>
+function Appendzero(obj)
+{
+if(obj<10) return "0" +""+ obj;
+else return obj;
+}
+function time() 
+{
+var date = new Date();
+var year = date.getFullYear();
+var month = date.getMonth()+1;
+var day = date.getDate();
+var hour = date.getHours();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+var str_time = "扫码时间：" + year + "-" + Appendzero(month) + "-" + Appendzero(day) + " " + Appendzero(hour) + ":" + Appendzero(minutes) + ":" + Appendzero(seconds);
+var health_time = document.getElementById("health_time");
+health_time.innerHTML = str_time;
+<!--
+var next_day = date.getDate()+1;
+var start = year + "年" + month + "月" + day + "日 " + Appendzero(hour-2) + ":00:00";
+var end = year + "年" + month + "月" + next_day + "日 " + Appendzero(hour-2) + ":00:00";
+var start_date = document.getElementById("start_date");
+start_date.innerHTML = start;
+var end_date = document.getElementById("end_date");
+end_date.innerHTML = end;
+-->
+}
+window.onload=function(){time()}
+<!--window.onbeforeunload = function() { return "\n确定离开当前页吗？";}-->
+</script>
+
+
+<div class="code_img qr-box qr-publice buaa_code_img">
+<div class=""><div id="qrcode" title="eaiuser_1615033351pGsHjnYxm2a0oBXb" style="">
+<canvas width="172" height="172" style="display: none;"></canvas>
+<img alt="Scan me!" style="display: block;" src="data:image/png;base64,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"></div> <span style="display: none;">二维码生成中...</span> <span style="display: none;">二维码生成失败，点击重新生成</span></div></div></div> <div class="line"></div> <div class="buaaszwz"><div class="szwz-header"><span class="left">所在位置</span> <span class="right">沙河校区-东门（进）</span></div></div> <!----> <!----> <div class="line"></div> <div class="mastervia-city"><em>您14天内途经的城市：</em><span></span></div> <div class="buaalianxidianhua"><em></em><span>若对通行码有疑问，请联系82317005</span><em></em></div></div></div></div> <!----> </div></body></html>
