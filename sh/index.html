@@ -8,7 +8,10 @@
         <title>小程序服务</title>
     </head>
 
-   <span style="position:relative; top:200px; left:100px; font-family: Verdana; font-weight:10", id="health_date"></span> <span id="health_time"></span>
+   <span style="position:relative; top:200px; left:107px; font-family: Verdana; font-weight:10; font-size: 13.8px;", id="health_date"></span> 
+   <span style="position:relative; top:200px; left:107px; font-family: Verdana; font-weight:10; font-size: 13.8px;" id="health_time"></span>
+   <span style="position:relative; top:200px; left:100px; font-family: Verdana; font-weight:10; font-size: 20px;" id="health_sec"></span>
+
 <script>
     function Appendzero(obj)
     {
@@ -25,11 +28,14 @@
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
     var str_date = year + "-" + Appendzero(month) + "-" + Appendzero(day);
-    var str_time = Appendzero(hour) + ":" + Appendzero(minutes) + ":" + Appendzero(seconds);
+    var str_time = Appendzero(hour) + ":" + Appendzero(minutes) + ":" ;
+    var str_sec = Appendzero(seconds);
     var health_date = document.getElementById("health_date");
     health_date.innerHTML = str_date;
     var health_time = document.getElementById("health_time");
+    var health_sec = document.getElementById("health_sec");
     health_time.innerHTML = str_time;
+    health_sec.innerHTML = str_sec;
     }
     setInterval(time,1000);
     window.onload=function(){time()}
