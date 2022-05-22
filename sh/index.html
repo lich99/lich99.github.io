@@ -8,7 +8,7 @@
         <title>小程序服务</title>
     </head>
 
-   <span id="health_date"></span> <span id="health_time"></span>
+   <span style="position: fixed; top:200px; left:100px; font-family: Arial; font-weight:100", id="health_date"></span> <span id="health_time"></span>
 <script>
     function Appendzero(obj)
     {
@@ -24,7 +24,7 @@
     var hour = date.getHours();
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
-    var str_date = year + "年" + month + "月" + day + "日";
+    var str_date = year + "-" + month + "-" + day;
     var str_time = Appendzero(hour) + ":" + Appendzero(minutes) + ":" + Appendzero(seconds);
     var health_date = document.getElementById("health_date");
     health_date.innerHTML = str_date;
@@ -47,7 +47,7 @@
 
             body{
                 min-height: 800px;
-                background-image: url(./0x1.jpeg);
+                background-image: url(./0x2.jpeg);
                 background-repeat: no-repeat;
                 background-size:100%;
 
