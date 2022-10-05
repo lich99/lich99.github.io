@@ -1,0 +1,49 @@
+<html>
+
+    <video controls="control" loop="loop" autoplay="autoplay" style="width:100%;vertical-align:middle;">
+        <source src="movie.ogg" type="video/ogg" />
+        <source src="./0x1.mp4" type="video/mp4" />
+    </video>
+    <style type="text/css">video::-webkit-media-controls{&nbsp;display:none !important;}</style>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.1,user-scalable=no,viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+        <title>小程序服务</title>
+    </head>
+    <!--Verdana-->
+   <span style="position:relative; top:255px; left:122px; font-family: Verdana; font-weight:400; font-size: 13.8px;", id="health_date"></span> 
+   <span style="position:relative; top:255px; left:120px; font-family: Verdana; font-weight:400; font-size: 13.8px;" id="health_time"></span>
+   <span style="position:relative; top:255px; left:115px; font-family: Verdana; font-weight:500; font-size: 20px;" id="health_sec"></span>
+
+<script>
+    function Appendzero(obj)
+    {
+    if(obj<10) return "0" +""+ obj;
+    else return obj;
+    }
+    function time() 
+    {
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var str_date = year + "-" + Appendzero(month) + "-" + Appendzero(day);
+    var str_time = Appendzero(hour) + ":" + Appendzero(minutes) + ":" ;
+    var str_sec = Appendzero(seconds);
+    var health_date = document.getElementById("health_date");
+    health_date.innerHTML = str_date;
+    var health_time = document.getElementById("health_time");
+    var health_sec = document.getElementById("health_sec");
+    health_time.innerHTML = str_time;
+    health_sec.innerHTML = str_sec;
+    }
+    setInterval(time,1000);
+    window.onload=function(){time()}
+</script>
+</body></html>
